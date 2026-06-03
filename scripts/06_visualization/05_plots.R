@@ -2,10 +2,10 @@
 
 source("scripts/00_setup/00_config.R")
 
-obj <- readRDS(file.path(out_dir, "A1281_epi_sub_reannotated_GSEA_complete.rds"))
-raw_assay <- readRDS(file.path(out_dir, "raw_assay.rds"))
-reannotate_order <- readRDS(file.path(out_dir, "reannotate_order.rds"))
-reannotate_colors <- readRDS(file.path(out_dir, "reannotate_colors.rds"))
+obj <- readRDS(file.path(rds_dir, "04_gsea_complete.rds"))
+raw_assay <- readRDS(file.path(rds_dir, "raw_assay.rds"))
+reannotate_order <- readRDS(file.path(rds_dir, "reannotate_order.rds"))
+reannotate_colors <- readRDS(file.path(rds_dir, "reannotate_colors.rds"))
 
 genes_AR  <- c("Nkx3-1", "Azgp1", "Fkbp5", "Tmprss2", "Sgk1")
 genes_P53 <- c("Cdkn1a", "Bbc3", "Pmaip1", "Gadd45a", "Bax", "Fas", "Rrm2b", "Sesn1", "Sesn2", "Noxa", "Puma", "Xpc", "Wig1", "Perp")

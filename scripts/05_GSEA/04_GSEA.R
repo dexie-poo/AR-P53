@@ -2,9 +2,9 @@
 
 source("scripts/00_setup/00_config.R")
 
-obj <- readRDS(file.path(out_dir, "A1281_epi_sub_reannotated_monocle.rds"))
-raw_assay <- readRDS(file.path(out_dir, "raw_assay.rds"))
-reannotate_order <- readRDS(file.path(out_dir, "reannotate_order.rds"))
+obj <- readRDS(file.path(rds_dir, "03_monocle_pseudotime_seurat.rds"))
+raw_assay <- readRDS(file.path(rds_dir, "raw_assay.rds"))
+reannotate_order <- readRDS(file.path(rds_dir, "reannotate_order.rds"))
 
 load("/gpfs/home/leungd02/RDS_Files/m_t2g.RData")
 
@@ -351,6 +351,8 @@ for (pin in pin_levels) {
   }
 }
 
-saveRDS(gmt_pathways, file.path(gsea_dir, "gmt_pathways.rds"))
-saveRDS(pin_levels, file.path(gsea_dir, "pin_levels.rds"))
+saveRDS(gmt_pathways, file.path(rds_dir, "gmt_pathways.rds"))
+
+saveRDS(pin_levels, file.path(rds_dir, "pin_levels.rds"))
+
 saveRDS(obj, file.path(rds_dir, "04_gsea_complete.rds"))

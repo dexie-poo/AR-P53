@@ -31,48 +31,27 @@ source("scripts/utils/helper_functions.R")
 
 raw_dir  <- "/gpfs/data/sunz04lab/ST/20260324_Dexie/result_A1281_0427_24um/outs"
 
-out_dir  <- "/gpfs/scratch/leungd02/06032026/A1281_final"
+out_dir <- "/gpfs/scratch/leungd02/06032026/A1281_final"
 
-gsea_dir <- file.path(out_dir, "GSEA")
-mono_dir <- file.path(out_dir, "Monocle3")
+rds_dir   <- file.path(out_dir, "rds")
+table_dir <- file.path(out_dir, "tables")
+plot_dir  <- file.path(out_dir, "plots")
+gsea_dir  <- file.path(out_dir, "gsea")
+mono_dir  <- file.path(out_dir, "monocle3")
+log_dir   <- file.path(out_dir, "logs")
 
-plot_dir <- file.path(out_dir, "Plots")
-expr_dir <- file.path(plot_dir, "Expression_Plots")
-vln_dir  <- file.path(plot_dir, "Violin_Plots")
+expr_dir <- file.path(plot_dir, "expression_plots")
+vln_dir  <- file.path(plot_dir, "violin_plots")
 
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
-
-dir.create(gsea_dir,
-           recursive = TRUE,
-           showWarnings = FALSE)
-
-dir.create(mono_dir,
-           recursive = TRUE,
-           showWarnings = FALSE)
-
-dir.create(file.path(mono_dir, "RDS"),
-           recursive = TRUE,
-           showWarnings = FALSE)
-
-dir.create(file.path(mono_dir, "Plots"),
-           recursive = TRUE,
-           showWarnings = FALSE)
-
-dir.create(file.path(mono_dir, "Tables"),
-           recursive = TRUE,
-           showWarnings = FALSE)
-
-dir.create(plot_dir,
-           recursive = TRUE,
-           showWarnings = FALSE)
-
-dir.create(expr_dir,
-           recursive = TRUE,
-           showWarnings = FALSE)
-
-dir.create(vln_dir,
-           recursive = TRUE,
-           showWarnings = FALSE)
+dir.create(rds_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(table_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(plot_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(gsea_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(mono_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(log_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(expr_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(vln_dir, recursive = TRUE, showWarnings = FALSE)
 
 padj_cutoff <- 0.25
 

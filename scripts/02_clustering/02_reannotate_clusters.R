@@ -2,8 +2,8 @@
 
 source("scripts/00_setup/00_config.R")
 
-obj <- readRDS(file.path(out_dir, "01_A1281_loaded_qc_clustered.rds"))
-raw_assay <- readRDS(file.path(out_dir, "raw_assay.rds"))
+obj <- readRDS(file.path(rds_dir, "01_qc_clustered.rds"))
+raw_assay <- readRDS(file.path(rds_dir, "raw_assay.rds"))
 
 seurat_char <- as.character(obj$seurat_clusters)
 reannotate_labels <- dplyr::case_when(

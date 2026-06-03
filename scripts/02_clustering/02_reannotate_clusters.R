@@ -34,5 +34,5 @@ Idents(obj) <- "reannotated"
 DefaultAssay(obj) <- raw_assay
 
 saveRDS(obj, file.path(out_dir, "A1281_epi_sub_reannotated_final.rds"))
-saveRDS(reannotate_order, file.path(out_dir, "reannotate_order.rds"))
-saveRDS(reannotate_colors, file.path(out_dir, "reannotate_colors.rds"))
+saveRDS(obj, file.path(rds_dir, "01_qc_clustered.rds"))
+saveRDS(raw_assay, file.path(rds_dir, "raw_assay.rds"))

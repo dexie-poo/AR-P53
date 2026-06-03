@@ -1,0 +1,9 @@
+*.rds
+*.h5ad
+*.bam
+*.fastq.gz
+*.mtx
+results/
+data_raw/
+data_processed/
+.Rhistory

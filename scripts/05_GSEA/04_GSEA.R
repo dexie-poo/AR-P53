@@ -352,5 +352,5 @@ for (pin in pin_levels) {
 }
 
 saveRDS(gmt_pathways, file.path(gsea_dir, "gmt_pathways.rds"))
-saveRDS(pin_levels, file.path(out_dir, "pin_levels.rds"))
-saveRDS(obj, file.path(out_dir, "A1281_epi_sub_reannotated_GSEA_complete.rds"))
+saveRDS(pin_levels, file.path(gsea_dir, "pin_levels.rds"))
+saveRDS(obj, file.path(rds_dir, "04_gsea_complete.rds"))

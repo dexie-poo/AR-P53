@@ -52,8 +52,9 @@ pt_df <- data.frame(
 )
 
 write.csv(pt_df, file.path(mono_dir, "Tables", "pseudotime_reannotated.csv"), row.names = FALSE)
-saveRDS(cds, file.path(mono_dir, "RDS", "monocle3_cds_A1281_reannotated_Epi_root.rds"))
+
 
 pt_named <- setNames(pseudotime(cds), colnames(cds))
 obj$monocle3_pseudotime <- pt_named[colnames(obj)]
-saveRDS(obj, file.path(out_dir, "A1281_epi_sub_reannotated_monocle.rds"))
+saveRDS(cds, file.path(rds_dir, "03_monocle_cds.rds"))
+saveRDS(obj, file.path(rds_dir, "03_monocle_pseudotime_seurat.rds"))

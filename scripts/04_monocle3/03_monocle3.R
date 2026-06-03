@@ -2,9 +2,8 @@
 
 source("scripts/00_setup/00_config.R")
 
-obj <- readRDS(file.path(rds_dir, "03_monocle_pseudotime_seurat.rds"))
+obj <- readRDS(file.path(rds_dir, "02_reannotated.rds"))
 raw_assay <- readRDS(file.path(rds_dir, "raw_assay.rds"))
-reannotate_order <- readRDS(file.path(rds_dir, "reannotate_order.rds"))
 
 count_matrix <- tryCatch(
   GetAssayData(obj, assay = raw_assay, layer = "counts"),

@@ -348,4 +348,4 @@ if (length(genes_found_plot) > 0) {
   )
 }
 
-saveRDS(obj, file.path(out_dir, "A1281_epi_sub_reannotated_visualization_complete.rds"))
+saveRDS(obj, file.path(rds_dir, "05_visualization_complete.rds"))

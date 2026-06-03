@@ -44,5 +44,5 @@ obj <- FindNeighbors(obj, dims = 1:15, verbose = FALSE)
 obj <- FindClusters(obj, resolution = 0.6, verbose = FALSE)
 obj <- RunUMAP(obj, dims = 1:5, n.neighbors = 50, min.dist = 0.3, seed.use = 42, verbose = FALSE)
 
-saveRDS(obj, file.path(out_dir, "01_A1281_loaded_qc_clustered.rds"))
-saveRDS(raw_assay, file.path(out_dir, "raw_assay.rds"))
+saveRDS(obj, file.path(rds_dir, "01_qc_clustered.rds"))
+saveRDS(raw_assay, file.path(rds_dir, "raw_assay.rds"))

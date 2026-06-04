@@ -27,7 +27,7 @@ suppressPackageStartupMessages({
   library(scales)
 })
 
-source("scripts/utils/helper_functions.R")
+source("scripts/Figure5_A1281/utils/helper_functions.R")
 
 project_dir <- "/gpfs/scratch/leungd02/ARP53"
 

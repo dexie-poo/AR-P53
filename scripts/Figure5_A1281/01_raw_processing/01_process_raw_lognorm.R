@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-source("scripts/00_setup/00_config.R")
+source("scripts/Figure5_A1281/00_setup/00_config.R")
 
 raw_obj <- Load10X_Spatial(
   data.dir = raw_dir,

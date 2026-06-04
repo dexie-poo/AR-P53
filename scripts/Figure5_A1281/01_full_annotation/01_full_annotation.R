@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-source("scripts/00_setup/00_config.R")
+source("scripts/Figure5_A1281/00_setup/00_config.R")
 
 message("Loading raw processed RDS...")
 

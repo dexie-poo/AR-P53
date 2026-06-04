@@ -16,3 +16,14 @@ results/
 data_raw/
 data_processed/
 .Rhistory
+outputs/
+logs/
+backups/
+Rplots.pdf
+*.out
+*.err
+*.tiff
+*.png
+*.pdf
+*.csv
+*.xlsx
